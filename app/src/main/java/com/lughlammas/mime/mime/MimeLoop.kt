@@ -45,6 +45,7 @@ class MimeLoop(
     }
 
     fun start() {
+        stopped = false
         resetBoard(0)
         phase = Phase.SHOW
         emit()
@@ -64,11 +65,15 @@ class MimeLoop(
 
         val probe = Board()
         probe.loadFromFen(board.fen)
-        val move = buildMove(probe, from, to, promotion) ?: run {
+        val candidate = buildMove(probe, from, to, promotion) ?: run {
             // Illegal geometry / piece — ignore without failing (parity: chess.js catch → false)
             return false
         }
-        if (!probe.isMoveLegal(move, true)) return false
+        // chesslib isMoveLegal() is unreliable for some pseudo-moves (e.g. e2e5 → true);
+        // match against legalMoves() for parity with chess.js.
+        val move = probe.legalMoves().firstOrNull {
+            it.toString().equals(candidate.toString(), ignoreCase = true)
+        } ?: return false
 
         probe.doMove(move)
         val got = move.toString().lowercase()

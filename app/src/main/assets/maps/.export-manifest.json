@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "path": "canon/accelerated-dragon.json",
+      "sha256": "4b362784cb09ef8599f6a62f89da60b32eeca1e02bea4d83c8e30de52b295ff9"
+    },
+    {
+      "path": "canon/italian-game.json",
+      "sha256": "0509b26a4678b13855645c60b74740e66d6c90775b5a7c2f9af71c2e1fa3f352"
+    },
+    {
+      "path": "index.json",
+      "sha256": "59123d8df071c7e003b988cb1a69189c2c90add081455475428609619b744ff6"
+    }
+  ]
+}

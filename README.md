@@ -61,3 +61,11 @@ Package id: `com.lughlammas.mime`
 ## Out of scope (v0)
 
 Hub, Day Feed, engine, PGN import, WebView, extra maps, music, PvP.
+
+## Test (v0.2)
+
+```bash
+./gradlew test
+```
+
+Goldens live under `app/src/test/resources/fixtures/golden/` (copied from mime web fixtures).

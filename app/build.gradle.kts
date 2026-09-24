@@ -12,7 +12,7 @@ android {
         minSdk = 26
         targetSdk = 34
         versionCode = 1
-        versionName = "0.1.0"
+        versionName = "0.2.0"
     }
 
     buildTypes {
@@ -50,6 +50,10 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
 }
 
 dependencies {
@@ -73,4 +77,9 @@ dependencies {
 
     implementation("com.squareup.moshi:moshi-kotlin:1.15.1")
     implementation("com.github.bhlangonijr:chesslib:1.3.3")
+
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.9.24")
+    testImplementation("com.squareup.moshi:moshi-kotlin:1.15.1")
 }

@@ -3,14 +3,14 @@
     {
       "id": "accelerated-dragon",
       "name": "Accelerated Dragon",
-      "path": "maps/canon/accelerated-dragon.json",
+      "path": "/maps/canon/accelerated-dragon.json",
       "side_to_learn": "black",
       "length": 8
     },
     {
       "id": "italian-game",
       "name": "Italian Game",
-      "path": "maps/canon/italian-game.json",
+      "path": "/maps/canon/italian-game.json",
       "side_to_learn": "white",
       "length": 8
     }
